@@ -1,0 +1,27 @@
+<nav id="header_set" class="header_fix">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="align-items-center">
+                    <div class="d-flex w-100 row">
+                        <div class="d-flex align-items-center col-md-6">
+                            <h1 class="app-name"><b>RENTAL MANAGEMENT SYSTEM</b></h1>
+                        </div>
+                        <div class="d-flex align-loc col-md-6">
+                            <button mat-button [matMenuTriggerFor]="main_menu" style="color: #fff;">{{selectedLocation}}</button>
+
+                            <mat-menu #main_menu="matMenu">
+                                <ng-container *ngFor="let loc of locations;let i = index">
+                                    <button mat-menu-item [matMenuTriggerFor]="sub_menu">{{ loc.name }}</button>
+                                    <mat-menu #sub_menu="matMenu">
+                                        <button *ngFor="let subItem of loc.branches; let k = index" (click)="categorySelected(i,k)" mat-menu-item>{{ subItem.name }}</button>
+                                    </mat-menu>
+                                </ng-container>
+                            </mat-menu>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

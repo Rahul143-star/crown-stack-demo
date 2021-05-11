@@ -1,0 +1,24 @@
+<div class="align-initial" *ngIf="!selectedBranch">
+    <div>
+        <div class="bold-heading">
+            <p>WELCOME TO</p>
+            <p>RENTAL MANAGEMENT SYSTEM</p>
+        </div>
+        <DIV>
+            <P>Please select location</P>
+        </DIV>
+    </div>
+</div>
+<div *ngIf="selectedBranch" class="pd-tp">
+    <div class="heading">
+        <p>{{selectedBranch.name}} Catalog</p>
+    </div>
+    <div class="d-flex align-cards">
+        <div *ngFor="let category of selectedBranch.categories;let i = index " class="mr box"
+            (click)="selectCategory(i)">
+            <img src="/assets/images/{{category.image}}" width="175" alt="">
+            <p>{{category.name}}</p>
+        </div>
+    </div>
+
+</div>

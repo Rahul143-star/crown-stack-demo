@@ -1,0 +1,31 @@
+.pd-tp {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+.box {
+    border: 1px solid #ccc;
+    flex: 1 1 23%;
+    margin: 0px 1% 20px;
+    max-width: 23%;
+    text-align: center;
+    box-shadow: 0 0 10px 2px rgb(0 0 0 / 15%);
+    cursor: pointer;
+    img {
+        height: 250px;
+        object-fit: scale-down;
+    }
+    p {
+        margin: 0;
+        padding: 10px 0px;
+        background: cornflowerblue;
+        color: #fff;
+    }
+}
+.heading {
+    padding-left: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.select-heading {
+    cursor: pointer;
+}

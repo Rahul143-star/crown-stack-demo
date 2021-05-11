@@ -1,0 +1,13 @@
+<div *ngIf="selectedCategory" class="pd-tp">
+    <div class="heading">
+        <span *ngIf="selectedBranch" class="select-heading" (click)="navigate()">{{selectedBranch.name}} Catalog / </span>
+        <span>{{selectedCategory.name}}</span>
+    </div>
+    <div class="d-flex align-cards">
+        <div *ngFor="let category of selectedCategory.subcategories;let i = index " class="mr box">
+            <img src="/assets/images/{{category.image}}" width="175" alt="">
+            <p>{{category.name}}</p>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,20 @@
+#header_set {
+    background-color: black;
+    padding: 9px 0 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,.3);
+}
+.app-name {
+    font-size: 16px;
+    color: #fff;
+    margin: 5px 0 0 30px;
+    font-weight: 400;
+    // margin-top: 42px;
+}
+.align-loc {
+    justify-content: flex-end;
+}
